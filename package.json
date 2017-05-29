@@ -1,0 +1,10 @@
+{
+    "name": "liszt-lambda",
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "author": "Jon Chen <bsd@voltaire.sh>",
+    "dependencies": {
+        "aws-sdk": "^2.57.0",
+        "ulid": "^0.1.0"
+    }
+}
