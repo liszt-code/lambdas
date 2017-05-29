@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:UpdateItem"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:us-west-2:635281304921:table/liszt-buildings-testing",
+        "arn:aws:dynamodb:us-west-2:635281304921:table/liszt-units-testing",
+        "arn:aws:dynamodb:us-west-2:635281304921:table/liszt-units-testing/index/building_unit_gsi",
+        "arn:aws:dynamodb:us-west-2:635281304921:table/liszt-residents-testing"
+      ],
+      "Sid": "DynamoDBRW"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:DescribeLogStreams",
+        "logs:PutLogEvents"
+      ],
+      "Resource": [
+        "arn:aws:logs:us-west-2:635281304921:log-group:/aws/lambda/lambdas-dev/*"
+      ]
+    }
+  ]
+}
