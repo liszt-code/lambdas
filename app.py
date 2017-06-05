@@ -9,12 +9,12 @@ app = Chalice(app_name='liszt')
 dynamodb = boto3.client('dynamodb')
 
 _LISZT_BUILDINGS_TABLE_NAME = os.getenv(
-    'LISZT_BUILDINGS_TABLE', 'liszt-buildings-production')
+    'LISZT_BUILDINGS_TABLE', 'liszt-buildings-testing')
 _LISZT_UNITS_TABLE_NAME = os.getenv(
-    'LISZT_UNITS_TABLE', 'liszt-units-production')
+    'LISZT_UNITS_TABLE', 'liszt-units-testing')
 _LISZT_UNITS_GSI_NAME = os.getenv('LISZT_UNITS_GSI', 'building_unit_gsi')
 _LISZT_RESIDENTS_TABLE_NAME = os.getenv(
-    'LISZT_RESIDENTS_TABLE', 'liszt-residents-production')
+    'LISZT_RESIDENTS_TABLE', 'liszt-residents-testing')
 
 
 def building_attribute_to_object(attribute):
